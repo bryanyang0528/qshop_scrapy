@@ -11,4 +11,15 @@ import scrapy
 class QshopItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    pass
+    item1 = scrapy.Field()
+    item2 = scrapy.Field()
+    yano = scrapy.Field()
+    keyword = scrapy.Field()
+    pdName = scrapy.Field()
+    pdno = scrapy.Field()
+    priceOriginal = scrapy.Field()
+    priceNormal = scrapy.Field()
+    price = scrapy.Field()
+    pdsales = scrapy.Field() 
+    date = scrapy.Field()
+
