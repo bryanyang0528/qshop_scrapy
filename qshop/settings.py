@@ -14,9 +14,13 @@ BOT_NAME = 'qshop'
 SPIDER_MODULES = ['qshop.spiders']
 NEWSPIDER_MODULE = 'qshop.spiders'
 
+ITEM_PIPELINES = { 'qshop.writeToCsv.WriteToCsv' : 300}
+FEED_URI = 'export.csv'
+FEED_FORMAT='csv'
+FEED_EXPORTERS = {'csv' : 'scrapy.exporters.CsvItemExporter'}
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'qshop (+http://www.yourdomain.com)'
+USER_AGENT = "Chrome/40.0.2214.111.5566520"
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS=32
@@ -24,7 +28,7 @@ NEWSPIDER_MODULE = 'qshop.spiders'
 # Configure a delay for requests for the same website (default: 0)
 # See http://scrapy.readthedocs.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-#DOWNLOAD_DELAY=3
+DOWNLOAD_DELAY=3
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN=16
 #CONCURRENT_REQUESTS_PER_IP=16
