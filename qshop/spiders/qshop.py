@@ -34,7 +34,7 @@ class Crawler(CrawlSpider):
             item[i] = ''
 
         #print sel.extract()
-        item['date'] = datetime.now().strftime("%Y%m%d")
+        item['date'] = datetime.now().strftime("%Y-%m-%d")
         
         #get item from link
         link = response.url
