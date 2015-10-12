@@ -13,6 +13,8 @@ class QshopItem(scrapy.Item):
     # name = scrapy.Field()
     item1 = scrapy.Field()
     item2 = scrapy.Field()
+    item1_ch = scrapy.Field()
+    item2_ch = scrapy.Field() 
     yano = scrapy.Field()
     keyword = scrapy.Field()
     pdName = scrapy.Field()
